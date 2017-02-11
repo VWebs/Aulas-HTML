@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8" />
+		<title>Aula13 Listas</title>
+		<style>
+
+ 			ul {
+ 				list-style-type:circle;
+ 			}
+
+			ul#menu {
+			   padding: 0;
+			}
+
+			ul#menu li {
+			    display: inline;
+			}
+
+			ul#menu li a {
+			    background-color: black;
+			    color: white;
+			    padding: 10px 20px;
+			    text-decoration: none;
+			    border-radius: 4px 4px 0 0;
+			}
+
+			ul#menu li a:hover {
+			    background-color: orange;
+			}
+
+		</style>
+	</head>
+	<body>
+
+		<ul>
+		  <li>Coffee</li>
+		  <li>Tea
+		    <ul>
+		      <li>Black tea</li>
+		      <li>Green tea</li>
+		    </ul>
+		  </li>
+		  <li>Milk</li>
+		</ul>
+
+		<ol type="i">
+		  <li>Coffee</li>
+		  <li>Tea</li>
+		  <li>Milk</li>
+		  <li>Beer</li>
+		</ol>
+
+		<dl>
+		  <dt>Coffee</dt>
+		  <dd>Bebida para te deixar acordado</dd>
+		  <dt>Milk</dt>
+		  <dd>Leite de vaca</dd>
+		</dl>
+	
+		<br>
+
+		<ul id="menu">
+		  <li><a href="http://www.google.com" target="_blank">Google</a></li>
+		  <li><a href="http://www.facebook.com" target="_blank">Facebook</a></li>
+		  <li><a href="http://www.youtube.com" target="_blank">Youtube</a></li>
+		  <li><a href="http://www.hotmail.com" target="_blank">Hotmail</a></li>
+		</ul>   		
+		
+	</body>
+</html>
+
+<!-- 
+
+LISTAS:
+
+	- Use o elemento <ul> para definir uma lista não ordenada.
+
+	- Use o atributo style para definir o estilo de marcador.
+		list-style-type:disc
+		list-style-type:circle
+		list-style-type:square
+		list-style-type:none
+
+	- Use o elemento <ol> para definir uma lista ordenada.
+
+	- Use o atributo type para definir o tipo de numeração.
+		type="1"
+		type="A"
+		type="a"
+		type="I"
+		type="i"
+
+	- Use o elemento <li> para definir um item da lista.
+
+	- Use o elemento <dl> para definir uma lista Descrição.
+
+	- Use o elemento <dt> para definir o termo descrição.
+
+	- Use o elemento <dd> para definir a descrição de dados.
+
+	- As listas podem ser aninhadas dentro de listas.
+
+	- Os itens da lista pode conter outros elementos HTML.
+
+	- Use a propriedade CSS display:inline; para exibir uma lista horizontal.
+
+-->

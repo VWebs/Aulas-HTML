@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Aula38 API Geolocation</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+
+		<!-- retorna a latitude e longitude da posição do usuário -->
+		<p id="demo">Clique no botão para pegar suas coordenadas</p>
+
+		<button onclick="getLocation()">Coordenadas</button>
+
+		<div id="mapholder"></div>
+
+		<script>
+			var x = document.getElementById("demo");
+
+			function getLocation() {
+			    if (navigator.geolocation) {
+			      navigator.geolocation.getCurrentPosition(showPosition, showError);
+			    }else{
+			      x.innerHTML = "Geolocation is not supported by this browser.";
+			    }
+			}
+
+			function showPosition(position) {
+			    var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+			    var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
+			    +latlon+"&zoom=14&size=400x300&sensor=false";
+			    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+			}
+
+			function showError(error) {
+			    switch(error.code) {
+			        case error.PERMISSION_DENIED:
+			            x.innerHTML = "User denied the request for Geolocation."
+			            break;
+			        case error.POSITION_UNAVAILABLE:
+			            x.innerHTML = "Location information is unavailable."
+			            break;
+			        case error.TIMEOUT:
+			            x.innerHTML = "The request to get user location timed out."
+			            break;
+			        case error.UNKNOWN_ERROR:
+			            x.innerHTML = "An unknown error occurred."
+			            break;
+			    }
+			}
+		</script>
+
+	</body>
+</html>
+
+<!-- 
+
+	- A API do Geolocation HTML é usado para obter a posição geográfica de um usuário.
+
+	- Uma vez que este pode comprometer a privacidade, a posição não está disponível a menos que o usuário aprove.
+
+	- O método getCurrentPosition () é usado para obter a posição do usuário.
+
+Exemplo explicou:
+
+	- Verifique se Geolocation é suportada
+	- Se suportado, execute o método getCurrentPosition (). Se não, exibir uma mensagem para o utilizador
+	- Se o método getCurrentPosition () for bem sucedido, ele retorna um objeto coordenadas para a função especificada no parâmetro (showPosition)
+	- A função showPosition () envia a latitude e longitude
+
+Atributos:
+
+	- coords.latitude	= The latitude as a decimal number
+	- coords.longitude = The longitude as a decimal number
+	- coords.accuracy	= The accuracy of position
+	- coords.altitude	= The altitude in meters above the mean sea level
+	- coords.altitudeAccuracy	= The altitude accuracy of position
+	- coords.heading	= The heading as degrees clockwise from North
+	- coords.speed	= The speed in meters per second
+	- timestamp	= The date/time of the response
+
+-->

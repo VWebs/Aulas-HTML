@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8" />
+		<title>Aula12 Tabelas</title>
+		<style>
+
+ 			table, th, td {
+		  	border: 1px solid black;
+		  	border-collapse: collapse;
+		  	padding: 15px;
+			}
+
+			table#t01 {
+			  width: 100%; 
+			  background-color: #f1f1c1;
+			}
+
+			table#t01 tr:nth-child(even) {
+    		background-color: #eee;
+			}
+			table#t01 tr:nth-child(odd) {
+			  background-color: #fff;
+			}
+			table#t01 th {
+			  color: white;
+			  background-color: black;
+			}
+
+		</style>
+	</head>
+	<body>
+
+		<table id="t01" style="width:100%">
+		<caption>Monthly savings</caption>
+			<tr>
+		    <th>Firstname</th>
+		    <th>Lastname</th>
+		    <th>Points</th>
+		  </tr>
+		  <tr>
+		    <td>Jill</td>
+		    <td>Smith</td>		
+		    <td>50</td>
+		  </tr>
+		  <tr>
+		    <td>Eve</td>
+		    <td>Jackson</td>		
+		    <td>94</td>
+		  </tr>
+		  <tr>
+		    <td>John</td>
+		    <td>Doe</td>		
+		    <td>80</td>
+		  </tr>
+		</table>
+
+		<br><br>
+
+		<table style="width:100%">
+		  <tr>
+		    <th>Name:</th>
+		    <td>Bill Gates</td>
+		  </tr>
+		  <tr>
+		    <th rowspan="2">Telephone:</th>
+		    <td>555 77 854</td>
+		  </tr>
+		  <tr>
+		    <td>555 77 855</td>
+		  </tr>
+		</table>
+
+		<br><br>
+
+		<table style="width:100%">
+		  <tr>
+		    <th>Name</th>
+		    <th colspan="2">Telephone</th>
+		  </tr>
+		  <tr>
+		    <td>Bill Gates</td>
+		    <td>555 77 854</td>
+		    <td>555 77 855</td>
+		  </tr>
+		</table>
+
+	</body>
+</html>
+
+<!-- 
+
+TABELAS:
+
+	- Use o elemento <table> para definir uma tabela.
+
+	- Use o elemento <tr> para definir uma linha da tabela.
+
+	- Use o elemento <td> para definir uma coluna de tabela.
+
+	- Use o elemento <th> para definir um cabeçalho da tabela.
+
+	- Use o elemento <caption> para definir uma legenda da tabela.
+
+	- Use a CSS propriedade border para definir uma fronteira ou bordas.
+
+	- Use a CSS propriedade border-collapse tira a borda dupla que é o padrão.
+
+	- Use a CSS propriedade padding para adicionar preenchimento às células.
+
+	- Use a CSS propriedade text-align para alinhar o texto da célula.
+
+	- Use a CSS propriedade border-spacing para definir o espaçamento entre as células.
+
+	- Use o atributo colspan para fazer um intervalo de células muitas colunas.
+
+	- Use o atributo rowspan para fazer com que um número de linhas de células.
+
+	- Use o atributo ID para definir exclusivamente uma tabela.
+
+-->

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Aula34 Videos</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+
+		<div style="text-align:center"> 
+		  <button onclick="playPause()">Play/Pause</button> 
+		  <button onclick="makeBig()">Big</button>
+		  <button onclick="makeSmall()">Small</button>
+		  <button onclick="makeNormal()">Normal</button>
+		  <br><br>
+		  <video width="400" id="video" controls autoplay>
+				  <source src="midia/git.mp4" type="video/mp4">
+				  Your browser does not support HTML5 video.
+			</video>
+		</div> 
+
+		<script> 
+			var myVideo = document.getElementById("video"); 
+
+			function playPause() { 
+			    if (myVideo.paused) 
+			        myVideo.play(); 
+			    else 
+			        myVideo.pause(); 
+			} 
+
+			function makeBig() { 
+			    myVideo.width = 560; 
+			} 
+
+			function makeSmall() { 
+			    myVideo.width = 320; 
+			} 
+
+			function makeNormal() { 
+			    myVideo.width = 420; 
+			} 
+		</script> 
+
+	</body>
+</html>
+
+<!-- 
+
+	<source src="midia/git.mp4" type="video/mp4">
+	<source src="mov_bbb.ogg" type="video/ogg">
+
+	- A controls atribuem adiciona controles de vídeo, como play, pause e volume.
+
+	- É uma boa idéia para incluir sempre width e height atributos.
+
+	- Texto entre o <video> e </ video> tag só vai exibir em navegadores que não suportam o elemento <video>.
+
+	- Várias <source> elementos podem conectar-se a diferentes arquivos de vídeo. O navegador irá usar o primeiro formato reconhecido.
+
+	- O atributo autoplay não funciona em dispositivos móveis como o iPad e iPhone. O vídeo começará a tocar automaticamente assim que ela abrir.
+
+	- O atributo loop especifica que o vídeo vai começar tudo de novo, cada vez que ele for concluído.
+
+	- O atributo muted especifica que a saída de áudio do vídeo deve ser silenciado.
+
+	- O atributo poster especifica uma imagem a ser mostrada enquanto o vídeo está baixando, ou até que o usuário pressiona o botão play. Se isso não for incluída, o primeiro quadro do vídeo será usado.
+
+	- O <source> tag é usado para especificar vários recursos de mídia para os elementos de mídia, como <video> e <audio>.
+
+	- O <track> tag especifica faixas de texto para elementos de mídia (<audio> e <video>).
+
+	- Este elemento é utilizado para especificar as legendas, arquivos de legenda oculta ou outros arquivos que contêm texto, que devem ser visíveis quando a mídia está jogando.
+
+	<track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+
+-->

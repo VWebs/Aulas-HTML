@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8" />
+		<title>Aula22 Formulario</title>
+	</head>
+	<body>
+
+		<form action="#" method="post" target="_self" accept-charset="UTF-8" enctype="application/x-www-form-urlencoded" autocomplete="off" novalidate>
+
+		<fieldset>
+				<legend>Personal information:</legend>
+
+				<!--_______________________________________________________-->
+
+				Search Google:
+  			<input type="search" name="googlesearch">
+
+  			<br /><br />
+
+			  Username:<br>
+			  <input type="text" name="firstname" required>
+
+			  <br />
+
+			  User password:<br>
+				<input type="password" name="psw">
+
+				<br /><br />
+
+				E-mail:
+  			<input type="email" name="email">
+
+			  <br /><br /><hr />
+			  <!--_______________________________________________________-->
+
+			  Add your homepage URL:
+  			<input type="url" name="homepage"><br><br>
+
+			  <textarea name="message" rows="10" cols="30">Texto</textarea>
+
+			  <br /><br /><hr />
+			  <!--_______________________________________________________-->
+
+			  <input type="radio" name="sex" value="male" checked> Male
+			  <br />
+			  <input type="radio" name="sex" value="female"> Female
+
+			  <br /><br /><hr />
+			  <!--_______________________________________________________-->
+
+			  <input type="checkbox" name="vehicle1" value="Bike"> I have a bike
+				<br>
+				<input type="checkbox" name="vehicle2" value="Car"> I have a car
+
+				<br /><br /><hr />
+			  <!--_______________________________________________________--> 
+
+			  <select name="cars">
+			    <option value="fiat" selected>Fiat</option>
+			    <option value="palio">Palio</option>
+			    <option value="fusca">Fusca</option>
+			    <option value="audi">Audi</option>
+			  </select>
+
+			  <br /><br /><hr />
+			  <!--_______________________________________________________-->
+
+			  <input list="browsers" name="browser">
+			  <datalist id="browsers">
+			    <option value="Internet Explorer">
+			    <option value="Firefox">
+			    <option value="Chrome">
+			    <option value="Opera">
+			    <option value="Safari">
+			  </datalist>
+
+			  <br /><br /><hr />
+			  <!--_______________________________________________________-->
+
+			  Quantity (between -5 and 5):
+  			<input type="number" name="quantity" min="-5" max="5">
+  			Quantity:
+  			<input type="number" name="points" min="0" max="100" step="10" value="30">
+
+  			<br /><br /><hr />
+			  <!--_______________________________________________________-->
+
+			  Birthday:
+  			<input type="date" name="bday"><br>
+  			Enter a date before 1980-01-01:
+			  <input type="date" name="bday" max="1979-12-31"><br>
+			  Enter a date after 2000-01-01:
+			  <input type="date" name="bday" min="2000-01-02"><br>
+			  Birthday (month and year):
+  			<input type="month" name="bdaymonth"><br>
+  			Select a week:
+  			<input type="week" name="week_year"><br>
+  			Select a time:
+  			<input type="time" name="usr_time"><br>
+  			Birthday (date and time):
+  			<input type="datetime-local" name="bdaytime">
+
+  			<br /><br /><hr />
+			  <!--_______________________________________________________-->
+
+			  Select your favorite color:
+  			<input type="color" name="favcolor" value="#ff0000">
+
+  			<br /><br /><hr />
+			  <!--_______________________________________________________-->
+
+				Points (betwen 0 and 10):
+	  		<input type="range" name="points" min="0" max="10">
+
+	  		<br /><br /><hr />
+			  <!--_______________________________________________________-->
+
+			  Select images: <input type="file" name="img" multiple>
+
+			  <br /><br /><hr />
+			  <!--_______________________________________________________-->
+
+			  Country code: <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code">
+
+			  <br /><br /><hr />
+			  <!--_______________________________________________________-->
+
+
+			  <input type="submit" value="Enviar" target="_blank">
+			  <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+				 <!--_______________________________________________________-->
+
+		</fieldset>
+
+		</form>
+
+	</body>
+</html>
+
+<!--
+
+ATRIBUTOS DO FORM:
+
+	- O atributo action define a ação a ser executada quando o formulário é enviado.
+
+	- Se o atributo action for omitido, a ação está definido para a página atual.
+
+	- O atributo método especifica o método HTTP (GET ou POST) para ser utilizado aquando da apresentação dos formulários.
+
+	- Você pode usar o GET (o método padrão), Se o envio do formulário é passiva (como uma consulta de pesquisa), e sem informação sensível, quando você usa GET, os dados do formulário será visível na página do endereço
+
+	- Você deve usar POST, Se o formulário é a atualização de dados, ou inclui informação sensível (password), POST oferece melhor segurança, pois os dados apresentados não é visível no endereço da página.
+
+	- aceitar-charset =	Especifica a codificação usada na forma apresentada (padrão: a página charset).
+
+	- action = Especifica um endereço (URL) para onde enviar o formulário (padrão: a página de submissão).
+
+	- autocomplete = Especifica se o navegador deve autocompletar da forma (default: on).
+
+	- enctype = Especifica a codificação dos dados apresentados (padrão: é codificado-url).
+
+	- method = Especifica o método HTTP usado ao enviar o formulário (padrão: GET).
+
+	- name = Especifica um nome usado para identificar a forma (para o uso do DOM: document.forms.name).
+
+	- novalidate = Especifica que o navegador não deve validar o formulário.
+
+	- target = Especifica o destino do endereço no atributo de ação (ex: _blank).
+
+OUTROS ATRIBUTOS:
+
+	- value = Especifica o valor inicial para um campo de entrada
+
+	- readonly = Especifica que o campo de entrada é somente leitura (não pode ser alterado):
+
+	- disabled = Especifica que o campo de entrada é desativado.
+
+	- size = Especifica o tamanho (em caracteres) para o campo de entrada
+
+	- maxlength = Especifica o comprimento máximo permitido para o campo de entrada
+
+	- autofocus = Especifica que um elemento <input> deve receber automaticamente o foco quando a página é carregada.
+
+	- formtarget = Especifica um nome ou uma palavra-chave que indica onde exibir a resposta que é recebido após enviar o formulário, substitui o target do form.
+
+	- width = Largura do atributo
+
+	- height = Altura do atributo
+
+	- list = Refere-se a um elemento <datalist> elemento que contém as opções pré-definidas para um elemento <input>.
+
+	- min e max = Especificar o valor mínimo e máximo para um elemento <input>.
+
+	- placeholder = Especifica uma dica a ser exibida no campo de entrada
+
+	- required = Torna o preenchimento obrigatorio.
+
+
+
+-->

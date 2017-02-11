@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8" />
+		<title>Aula19 Javascript</title>
+	</head>
+	<body>
+
+		<h1>Meu primeiro Javascript</h1>
+
+		<p>JavaScript pode mudar o conteúdo de um elemento HTML:</p>
+
+		<button type="button" onclick="myFunction()">Click Me!</button>
+
+		<p id="demo">Antes de clicar!</p>
+
+		<script>
+			function myFunction() { 
+			    document.getElementById("demo").innerHTML = "Depois de clicar!";
+			    document.getElementById("demo").style.fontSize = "25px";
+			}
+		</script>
+
+		<script>
+			function light(sw) {
+			    var pic;
+			    if (sw == 0) {
+			        pic = "img/pic_bulboff.gif"
+			    } else {
+			        pic = "img/pic_bulbon.gif"
+			    }
+			    document.getElementById('myImage').src = pic;
+			}
+		</script>
+
+		<img id="myImage" src="img/pic_bulboff.gif" width="100" height="180">
+
+		<p>
+		<button type="button" onclick="light(1)">Light On</button>
+		<button type="button" onclick="light(0)">Light Off</button>
+		</p>
+
+		<noscript>Desculpe, Seu browser não suporte javascript!</noscript>
+
+	</body>
+</html>
+
+<!-- 
+
+JAVASCRIPT:
+
+	- A tag <script> é usado para definir um script do lado do cliente, tais como JavaScript.
+
+	- O elemento <script> ou contém declarações de script ou ele aponta para um arquivo de script externo através do atributo src.
+
+	- Os usos mais comuns para JavaScript são de manipulação de imagem, validação de formulário, e as mudanças dinâmicas do conteúdo.
+
+	- A tag <noscript> é utilizado para fornecer um conteúdo alternativo para os usuários que têm roteiros com deficiência em seu navegador ou têm um navegador que não oferece suporte a scripts do lado do cliente.
+
+	- O elemento <noscript> pode conter todos os elementos que você pode encontrar dentro do elemento <body> de uma página HTML normal.
+
+	- O conteúdo dentro do elemento <noscript> será exibido apenas se os scripts não são suportados ou estão desativados no navegador do usuário:
+
+-->
